@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Landing page</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <header class="site-Header coming-soon-header">
+        <div class="site-header-inner comingsoon-sidePadding">
+            <div class="cst-siteContainer">
+                <div class="logoQr-sec">
+                    <div class="site_header_logo">
+                        <a href="#" title="Jet Puffed" class="site_logo"><img src="images/jet_puffed.svg"
+                                alt="Jet Puffed" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+   <div id="loading">
+    <img id="loading-image" src="images/loading-img.gif" alt="Loading..." />
+</div>
+<div class="qr-landing-page-content dark-bg">
+        <img src="images/qr-page-bg.jpg" alt="Landing background" class="page-bg-img desktop-img" />
+        <img src="images/landing-bg-mobile.jpg" alt="Landing background" class="page-bg-img mobile-img" />
+        <div class="qr-landing-content-inner">
+            <!----Left content Right Image section-->
+            <div class="qrLeftRightOuterBlock site-sidePadding">
+                <div class="cst-siteContainer">
+                    <div class="qrColWrap">
+                        <div class="qrleftSide">
+                            <h1 class="title-heading-h2">Find the S'morian Constalation</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <ol>
+                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</li>
+                                <li>Duis aute irure dolor in reprehenderit in </li>
+                                <li>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</li>
+                            </ol>
+                        </div>
+                        <div class="qrRightSide">
+                            <img src="images/qr-example.svg" alt="QR Example">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+	
+    <footer class="siteFooter coming-soon-footer">
+        <div class="siteFooter_Inner comingsoon-sidePadding">
+            <div class="cst-siteContainer">
+                <div class="siteFooter_top_sec">
+                    <div class="siteFooter_menu">
+                        <ul>
+                            <li><a href="https://www.myfoodandfamily.com/contact_us" target="_blank">Contact Us</a></li>
+                            <li><a href="https://www.myfoodandfamily.com/useragreement" target="_blank">Terms of Use</a></li>
+                            <li><a href="https://www.myfoodandfamily.com/privacynotice" target="_blank">Privacy</a></li>
+                            <li><a href="https://www.myfoodandfamily.com/privacynotice#dontSellPersonalInfo" target="_blank">Do Not Sell My Personal Information</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="siteFooter_bottom_sec">
+                    <div class="siteFooter_copyright_sec">
+                        <div class="siteFooter_logo">
+                            <a href="#" title="Jet Puffed"><img src="images/jet_puffed.svg" alt="Jet Puffed"></a>
+                        </div>
+                        <div class="siteFooter_copyright_text">
+                            <p>©2022 Kraft Foods. All Rights Reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/jquery.min.js"></script>
+
+    <script type="text/javascript">
+             jQuery(window).on('load', function () {
+            var width = jQuery(window).width();
+            if (width > 767) {
+                document.getElementById('desktop-video').play();
+            } else {
+                document.getElementById('mobile-video').play();
+            }
+        })
+    </script>
+
+</body>
+
+</html>

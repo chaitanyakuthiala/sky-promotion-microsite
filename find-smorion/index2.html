@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- <script src="./getco.js"></script>
+<script src="./compute.js"></script> -->
+
+<head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>S'morion</title>
+    <script>
+        var unsupported_var = true;
+        var star1values = [];
+        var script = document.createElement("script");
+        script.src = "./getco.js?" + Date.now();
+        document.head.appendChild(script);
+        var script2 = document.createElement("script");
+        script2.src = "./compute.js?" + Date.now();
+        document.head.appendChild(script2);
+        var style = document.createElement("link")
+        style.rel = "stylesheet";
+        style.href = "./style.css?" + Date.now();;
+        document.head.appendChild(style);
+    </script>
+</head>
+
+<body id="main-body" class="main_body">
+    <!-- style="margin: auto;overflow-x: hidden; overflow-y: hidden; " -->
+    <div>
+        <div id="main-div" class="main_div">
+            <img class="main_div_image" src="https://amplify-amplifyd4bfd4a5273c4-staging-04721-deployment.s3.amazonaws.com/sky3.svg" />
+        </div>
+    </div>
+    <!-- constellation content-->
+    <div id="showgif" class="star_wrapper display_none">
+        <div id="constellation">
+            <img src="./constellation.gif" class="const_image" />
+        </div>
+        <div class="star_content">
+            <span class="star_title">fluff yeah! you found it. now share it. </span>
+            <!-- <button onclick="onClickTakeSelfie()" class="btn star_button">take selfie</button> -->
+        </div>
+    </div>
+
+
+    <div onclick="onToHome()" id="jeticon" class="jeticon_style">
+        <img src="./jet.svg" class="jeticon_style_image" />
+    </div>
+    <!-- Modal for location -->
+    <div id="modal_wrapper" class="modal_wrapper display_none">
+        <div class="modal_content">
+            <span class="modal_title">S&#x27morion Spotter needs to use your location</span>
+            <span class="modal_subtitle">Grant location access to start scanning the sky</span>
+            <div class="modal_button_wrapper">
+                <button class="btn modal_cancel" onclick="onClickDontAllow()">Don&#x27t Allow</button>
+                <button class="btn modal_confirm" onclick="onClickOk()">Ok</button>
+            </div>
+
+        </div>
+    </div>
+    <!-- arrow container-->
+    <div id="tosty" class="arrow_wrapper display_none">
+        <span id="arrow-title" class="arrow_title">Glow left or glow right</span>
+        <div class="arrow_div">
+            <img id="top" src="./Top.svg" class="arrow_image display_none" />
+            <img id="bottom" src="./Bottom.svg" class="arrow_image display_none" />
+            <img id="left" src="./Left.svg" class="arrow_image display_none" />
+            <img id="right" src="./Right.svg" class="arrow_image" />
+        </div>
+    </div>
+    <!-- Ready to see star box -->
+    <div id="ready_to_box" class="ready_to_box">
+        <div class="ready_to_box_content">
+            <span class="ready_to_box_title">Ready to see the big skewer in the sky? </span>
+            <span class="ready_to_box_subtitle">#GoSmoregazing by scanning the stars with your phone to find our big, puffy skewer in the sky.</span>
+            <div class="modal_button_wrapper">
+
+                <button class="btn modal_confirm" onclick="onClickReadyToSeeStar()">find S&#x27morion!</button>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+<script>
+    function absorbEvent_(event) {
+        var e = event || window.event;
+        e.preventDefault && e.preventDefault();
+        e.stopPropagation && e.stopPropagation();
+        e.cancelBubble = true;
+        e.returnValue = false;
+        return false;
+    }
+
+    function preventLongPressMenu(node) {
+        node.ontouchstart = absorbEvent_;
+        node.ontouchmove = absorbEvent_;
+        node.ontouchend = absorbEvent_;
+        node.ontouchcancel = absorbEvent_;
+    }
+
+    preventLongPressMenu(document.getElementById('main-div'));
+
+
+    function onClickOk() {
+        if (typeof window.DeviceOrientationEvent.requestPermission === "function") {
+            iOSOrientation();
+        } else {
+            myGeo();
+            setupOrientationEvents();
+        }
+
+        document.getElementById("modal_wrapper").classList.toggle('display_none');
+        // document.getElementById("jeticon").classList.toggle('display_none');
+    }
+
+    function onClickReadyToSeeStar() {
+        document.getElementById("ready_to_box").classList.add("display_none");
+        document.getElementById("modal_wrapper").classList.remove("display_none");
+    }
+
+    function onToHome() {
+        window.location.href = "/";
+    }
+</script>
+<script>
+    var x = 0;
+    var y = 0;
+    var clicks = 0;
+
+    // setInterval(() => {
+    //     document.getElementById("showgif").classList.toggle("display_none")
+    // }, 2000)
+
+    // var star1 = compute(
+    //     41,
+    //     13.32,
+    //     20,
+    //     27.27,
+    //     lat_user_d,
+    //     lat_user_m,
+    //     long_user_d,
+    //     long_user_m
+    // );
+    // setInterval(() => {
+    //     console.log("Sds")
+    //     let parent = document.getElementById('main-div')
+    //     document.body.scroll = "no";
+    //     // let constellation1 = document.getElementById('constellation1')
+    //     // constellation1.style.top = x + "px"
+    //     // constellation1.style.left = x + "px"
+    //     // constellation1.style.transform = `translate(${x,x})`
+    //     parent.scrollTo({
+    //         top: clicks,
+    //         left: clicks,
+    //         behavior: 'smooth'
+    //     });
+
+    //     // parent2.scrollTo({
+    //     //     top: clicks,
+    //     //     left: clicks,
+    //     //     behavior: 'smooth'
+    //     // });
+    //     clicks += 10;
+    //     x += 20;
+    //     // if (clicks > 1200) {
+    //     //     clicks = 0;
+    //     // }
+    //     // })
+    // }, 100)
+</script>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Landing page</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-W5KKSF9');
+    </script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W5KKSF9"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header class="site-Header coming-soon-header">
+        <div class="site-header-inner comingsoon-sidePadding">
+            <div class="cst-siteContainer">
+                <div class="logoQr-sec">
+                    <div class="site_header_logo">
+                        <a href="/" title="Jet Puffed" class="site_logo"><img src="images/jet_puffed_logo.png" alt="Jet Puffed" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="qr-landing-page-content dark-bg">
+        <img src="images/qr-page-bg.jpg" alt="Landing background" class="page-bg-img desktop-img" />
+        <img src="images/landing-bg-mobile.jpg" alt="Landing background" class="page-bg-img mobile-img" />
+        <div class="qr-landing-content-inner">
+            <!----Left content Right Image section-->
+            <div class="qrLeftRightOuterBlock site-sidePadding">
+                <div class="cst-siteContainer">
+                    <div class="qrColWrap">
+                        <div class="qrleftSide">
+                            <h1 class="title-heading-h2">discover Jet-Puffed S'morion</h1>
+                            <p>Find the big puffy skewer in the sky! Scan the qr code to use our virtual <span class="cst-inline-block">constellation spotter.</span></p>
+                            <!-- <ol>
+                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</li>
+                                <li>Duis aute irure dolor in reprehenderit in </li>
+                                <li>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                </li>
+                            </ol> -->
+                        </div>
+                        <div class="qrRightSide">
+                            <img src="images/scan-me.svg" alt="Quick Response code">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="siteFooter coming-soon-footer">
+        <div class="siteFooter_Inner comingsoon-sidePadding">
+            <div class="cst-siteContainer">
+                <div class="siteFooter_top_sec">
+                    <div class="siteFooter_menu">
+                        <ul>
+                            <li><a href="https://www.myfoodandfamily.com/contact_us" target="_blank">Contact Us</a></li>
+                            <li><a href="https://www.myfoodandfamily.com/useragreement" target="_blank">Terms of Use</a>
+                            </li>
+                            <li><a href="https://www.myfoodandfamily.com/privacynotice" target="_blank">Privacy</a></li>
+                            <li><a href="https://www.myfoodandfamily.com/privacynotice#dontSellPersonalInfo" target="_blank">Do Not Sell My Personal Information</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="siteFooter_bottom_sec">
+                    <div class="siteFooter_copyright_sec">
+                        <div class="siteFooter_logo">
+                            <a href="/" title="Jet Puffed"><img src="images/jet_puffed_logo.png" alt="Jet Puffed"></a>
+                        </div>
+                        <div class="siteFooter_copyright_text">
+                            <p>©2022 Kraft Foods. All Rights Reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        jQuery(window).on('load', function() {
+            var width = jQuery(window).width();
+            if (width > 767) {
+                document.getElementById('desktop-video').play();
+            } else {
+                document.getElementById('mobile-video').play();
+            }
+        })
+    </script>
+
+</body>
+
+</html>

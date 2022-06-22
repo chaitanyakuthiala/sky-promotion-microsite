@@ -1,0 +1,275 @@
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+}
+
+.loader {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #000;
+    z-index: 100;
+    text-align: center;
+}
+
+.videoCam {
+    z-index: 0;
+}
+
+.main {
+    width: 100%;
+    background: #000 url('/images/sky-stars1.svg');
+    width: 100%;
+    height: 100vh;
+    background-size: 100%;
+    z-index: 2;
+}
+
+.header {
+    height: 80px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    display: table;
+    text-align: center;
+    width: 100%;
+}
+
+.header .title {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.videoContainer {
+    position: absolute;
+    width: 100vw;
+    margin: 0 auto;
+    bottom: 0;
+    z-index: 9;
+}
+
+.video {
+    height: 10px;
+    width: 10px;
+    opacity: 0;
+    // display: none;
+    z-index: -1;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    // width: 100%;
+    height: auto;
+}
+
+.canvas {
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+.right {
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .title {
+        font-size: 25px;
+    }
+}
+
+.selfieWrapper {
+    background: #fff;
+    border-radius: 20px;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10vh;
+    text-align: center;
+    .icon {
+        position: relative;
+        display: block;
+        margin-bottom: 15px;
+        img {
+            height: 50px;
+            width: 240px;
+        }
+    }
+    .title {
+        font-family: "Becky-Bold";
+        font-size: 26px;
+    }
+    p {
+        margin: 0;
+        margin-bottom: 15px;
+        font-size: 16px;
+    }
+}
+
+.camerabtn {
+    height: 50px;
+    border: none;
+    width: 50px;
+    background: transparent;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 40px;
+    padding: 0;
+    img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.buttons {
+    margin-top: 30px;
+    max-width: 500px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 200px;
+    button {
+        position: relative;
+        width: 120px;
+        height: 45px;
+        padding: 10px 0;
+        font-size: 14px;
+        color: #fff;
+        background: #333c5f;
+        border-radius: 30px;
+        background: linear-gradient(145deg, #374066, #2e3656);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        &:hover {
+            cursor: pointer;
+            -webkit-animation: button8 0.5s both;
+            animation: button8 0.5s both;
+        }
+    }
+    @keyframes button8 {
+        0% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+        100% {
+            -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+        }
+    }
+}
+
+.logo {
+    width: 100%;
+    margin: 5vh 0;
+    position: relative;
+    text-align: center;
+    img {
+        height: 50px;
+    }
+}
+
+.consImage {
+    position: relative;
+    text-align: center;
+    img {
+        height: 33vh;
+    }
+}
+
+.btn {
+    padding: 10px;
+    border-radius: 100px;
+    line-height: normal;
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+    width: 100%;
+    font-family: 'Becky-Bold';
+    border: 5px solid #CCFFCC;
+    background: #CCFFCC;
+}
+
+@media screen and (max-width: 767px) {
+    .logo {
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .selfieWrapper {
+        bottom: 7vh;
+    }
+    .logo {
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 413px) {
+    .selfieWrapper {
+        bottom: 5vh;
+        .icon {
+            margin-bottom: 10px;
+            img {
+                height: 40px;
+            }
+        }
+        p {
+            margin-bottom: 10px;
+        }
+    }
+    .logo {
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 374px) {
+    .logo {
+        margin-bottom: 10px;
+        img {
+            height: 40px;
+        }
+    }
+}
+
+// @media only screen and (max-width: 767px) {
+//     .main {
+//         flex-direction: column;
+//     }
+//     .videoContainer {
+//         width: 100%;
+//         margin-top: 20px;
+//     }
+//     .video {
+//         max-height: 300px;
+//         width: auto;
+//         margin: 0 auto;
+//     }
+//     .canvas {
+//         max-height: 300px;
+//         width: auto;
+//         margin: 0 auto;
+//     }
+//     .right {
+//         margin-top: 350px;
+//     }
+//     .buttons {
+//         width: 100%;
+//         button {
+//             width: calc(100% * 1 / 2);
+//         }
+//     }
+// }

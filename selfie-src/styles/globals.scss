@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "Becky-Regular";
+  src: url("../public/fonts/Becky-Regular.ttf")format("truetype");
+}
+@font-face {
+  font-family: "Becky-Medium";
+  src: url("../public/fonts/Becky-Bold.ttf")format("truetype");
+}
+@font-face {
+  font-family: "Becky-Bold";
+  src: url("../public/fonts/Becky-Bold.ttf")format("truetype");
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Becky-Regular";
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}

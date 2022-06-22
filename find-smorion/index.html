@@ -1,0 +1,301 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- <script src="./getco.js"></script>
+<script src="./compute.js"></script> -->
+
+<head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-W5KKSF9');
+    </script>
+    <!-- End Google Tag Manager -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>S'morion</title>
+    <script>
+        var unsupported_var = true;
+        var star1values = [];
+        var script = document.createElement("script");
+        script.src = "./getco.js?" + Date.now();
+        document.head.appendChild(script);
+        var script2 = document.createElement("script");
+        script2.src = "./compute.js?" + Date.now();
+        document.head.appendChild(script2);
+        var style = document.createElement("link")
+        style.rel = "stylesheet";
+        style.href = "./style.css?" + Date.now();;
+        document.head.appendChild(style);
+    </script>
+
+</head>
+
+<body id="main-body" class="main_body">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W5KKSF9"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- <div id="test1" style="background-color:white ; padding: 50px; position: absolute; top:100px;left:100px; z-index: 9999;"></div> -->
+    <div id="loading" style="position: fixed;top: 0;bottom: 0;left: 0;right: 0;background: rgba(0,0,0,0.8);z-index: 100;text-align: center;">
+        <img id="loading-image" src="/images/loading-img.gif" alt="Loading..." style="margin-top: calc(50vh - 90px);width: 80px;" />
+    </div>
+    <div id="outerdiv" style="display: none;">
+        <!-- style="margin: auto;overflow-x: hidden; overflow-y: hidden; " -->
+        <div id="main-div" class="img-wrapper">
+            <div class="img-inner">
+                <div id="consta" class="image-item-front display_none">
+                    <div class="const-image consta_g">
+                        <img id="const_gif" src="./marshmellow-blank.png" alt="" class="jet-star-img">
+                        <!-- <img id="const_png" src="./marshmellow-blank.png" alt="" class="jet-star-img"> -->
+                        <!-- static-img -->
+
+                        <div id="shooting_s" class="stars_falling display_none">
+                            <div class="shooting_star"></div>
+                            <div class="shooting_star"></div>
+                            <div class="shooting_star"></div>
+                            <div class="shooting_star"></div>
+                            <div class="shooting_star"></div>
+                            <div class="shooting_star"></div>
+                            <div class="shooting_star"></div>
+                            <div class="shooting_star"></div>
+                            <div class="shooting_star"></div>
+                            <div class="shooting_star"></div>
+                            <div class="shooting_star"></div>
+                            <div class="shooting_star"></div>
+                            <div class="shooting_star"></div>
+                            <div class="shooting_star"></div>
+                            <div class="shooting_star"></div>
+                            <div class="shooting_star"></div>
+                            <div class="shooting_star"></div>
+                            <div class="shooting_star"></div>
+                            <div class="shooting_star"></div>
+                            <div class="shooting_star"></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="head-content content-section display_none">
+                        <p class="title">fluff yeah! <br/> you found it. </p>
+                        <button onclick="onClickToggleDesc()" class="btn star_button">learn more</button>
+                    </div>
+                    <div class=" content-section meet-section display_none">
+                        <p class="title">Meet Jet-Puffed S&#x27morion</p>
+                        <div class="desc">
+                            <p>S&#x27morion is the newest constellation <br/> to glow up the Milky Way. </p>
+
+                            <p> Thirteen twinkly stars make up its <br/> big, fluffy skewer shape, but its <br/> brightest stars are Ooey and Gooey. </p>
+
+                            <p> Forever s&#x27more in the sky, S&#x27morion <br/> is officially recognized by the <br/> International Star Registry.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-item-back">
+                    <img src="./sky.svg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div onclick="onToHome()" id="jeticon" class="jeticon_style">
+            <img src="./jet.svg" class="jeticon_style_image" />
+        </div>
+        <!-- Modal for location -->
+        <div id="modal_wrapper" class="modal_wrapper">
+            <div class="modal_content">
+                <p class="title">ready to see the big <br/> skewer in the sky?</p>
+                <p>Grant location access and start <br/> scanning the sky for S&#x27morion.</p>
+                <div class="modal_button_wrapper">
+                    <div class="btn-div"> <button class="btn modal_cancel" onclick="onClickOk()">let&#x27s glow</button></div>
+                    <div class="btn-div"><button class="btn modal_confirm bordered-btn" onclick="onClickDontAllow()">don&#x27t allow</button></div>
+                </div>
+
+            </div>
+        </div>
+        <!-- arrow container-->
+        <div id="tosty" class="arrow_wrapper display_none">
+            <span id="arrow-title" class="arrow_title">scan the sky</span>
+            <div class="arrow_div">
+                <img id="top" src="./Top.svg" class="arrow_image" />
+                <img id="bottom" src="./Bottom.svg" class="arrow_image display_none" />
+                <img id="left" src="./Left.svg" class="arrow_image display_none" />
+                <img id="right" src="./Right.svg" class="arrow_image display_none" />
+            </div>
+        </div>
+        <!-- Ready to see star box -->
+        <!-- <div id="ready_to_box" class="ready_to_box">
+        <div class="ready_to_box_content">
+            <span class="ready_to_box_title">Ready to see the big skewer in the sky? </span>
+            <span class="ready_to_box_subtitle">#GoSmoregazing by scanning the stars with your phone to find our big, puffy skewer in the sky.</span>
+            <div class="modal_button_wrapper">
+
+                <button class="btn modal_confirm" onclick="onClickReadyToSeeStar()">find S&#x27morion!</button>
+            </div>
+
+        </div>
+    </div> -->
+    </div>
+    <div id="learn_more" class="head-content content-section display_none">
+        <p class="title fade">fluff yeah! <br/> you found it. </p>
+        <button onclick="window.location.href='/take-selfie/'" class="btn star_button">take a selfie</button>
+        <br/><br/>
+        <button onclick="onClickToggleDesc()" class="btn star_smore">learn s&#x27more</button>
+    </div>
+
+    <div style="display: none;" id="outerdiv2">
+        <!-- style="margin: auto;overflow-x: hidden; overflow-y: hidden; " -->
+        <div id="" class="img-wrapper">
+            <div class="img-inner">
+
+                <div id="" class="image-item-front">
+                    <div onclick="onToHome()" id="jeticon" class="jeticon_style">
+                        <img src="./jet.svg" class="jeticon_style_image" />
+                    </div>
+                    <div class="const-image">
+                        <img src="./constellation.gif" alt="" class="jet-star-img">
+                    </div>
+
+                    <div class="content-section meet-section">
+                        <p class="title">Meet Jet-Puffed S&#x27morion</p>
+                        <div class="desc">
+                            <p>S&#x27morion is the newest constellation <br/> to glow up the Milky Way. </p>
+
+                            <p> Thirteen twinkly stars make up its <br/> big, fluffy skewer shape, but its <br/> brightest stars are Ooey and Gooey. </p>
+
+                            <p> Forever s&#x27more in the sky, S&#x27morion <br/> is officially recognized by the <br/> International Star Registry.</p>
+                        </div>
+
+                        <button onclick="window.location.reload()" class="btn star_button">back to s&#x27moregazing</button>
+                    </div>
+
+                </div>
+                <div class="image-item-back">
+                    <img src="https://amplify-amplifyd4bfd4a5273c4-staging-04721-deployment.s3.amazonaws.com/sky3.svg" alt="">
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+</body>
+<script>
+    function onClickToggleDesc() {
+        document.getElementById("outerdiv2").style.display = "";
+        document.getElementById("outerdiv").style.display = "none";
+        document.getElementById("learn_more").style.display = "none";
+    }
+
+    function absorbEvent_(event) {
+        var e = event || window.event;
+        e.preventDefault && e.preventDefault();
+        e.stopPropagation && e.stopPropagation();
+        e.cancelBubble = true;
+        e.returnValue = false;
+        return false;
+    }
+
+    function preventLongPressMenu(node) {
+        node.ontouchstart = absorbEvent_;
+        node.ontouchmove = absorbEvent_;
+        node.ontouchend = absorbEvent_;
+        node.ontouchcancel = absorbEvent_;
+    }
+
+    preventLongPressMenu(document.getElementById('main-div'));
+
+
+    function onClickOk() {
+        document.getElementById("modal_wrapper").classList.add('display_none');
+
+        if (typeof window.DeviceOrientationEvent.requestPermission === "function") {
+            iOSOrientation();
+        } else {
+            myGeo();
+            setupOrientationEvents();
+        }
+        document.getElementById("tosty").classList.remove('display_none');
+
+    }
+
+    // function onClickReadyToSeeStar() {
+    //     document.getElementById("ready_to_box").classList.add("display_none");
+    //     document.getElementById("modal_wrapper").classList.remove("display_none");
+    // }
+
+    function onToHome() {
+        window.location.href = "/";
+    }
+</script>
+<script>
+    window.onload = function() {
+        document.getElementById("loading").style.display = "none";
+        document.getElementById("outerdiv").style.display = "";
+
+    };
+    var x = 0;
+    var y = 0;
+    var clicks = 0;
+
+    // setInterval(() => {
+    //     document.getElementById("showgif").classList.toggle("display_none")
+    // }, 2000)
+
+    // var star1 = compute(
+    //     41,
+    //     13.32,
+    //     20,
+    //     27.27,
+    //     lat_user_d,
+    //     lat_user_m,
+    //     long_user_d,
+    //     long_user_m
+    // );
+    // setInterval(() => {
+    //     console.log("Sds")
+    //     let parent = document.getElementById('main-div')
+    //     document.body.scroll = "no";
+    //     // let constellation1 = document.getElementById('constellation1')
+    //     // constellation1.style.top = x + "px"
+    //     // constellation1.style.left = x + "px"
+    //     // constellation1.style.transform = `translate(${x,x})`
+    //     parent.scrollTo({
+    //         top: clicks,
+    //         left: clicks,
+    //         behavior: 'smooth'
+    //     });
+
+    //     // parent2.scrollTo({
+    //     //     top: clicks,
+    //     //     left: clicks,
+    //     //     behavior: 'smooth'
+    //     // });
+    //     clicks += 10;
+    //     x += 20;
+    //     // if (clicks > 1200) {
+    //     //     clicks = 0;
+    //     // }
+    //     // })
+    // }, 100)
+</script>
+
+</html>
