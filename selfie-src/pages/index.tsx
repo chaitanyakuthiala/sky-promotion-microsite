@@ -81,9 +81,8 @@ function Home() {
   };
 
   function closeModal() {
-    let eleImg = document.querySelector(
-      "#finalImageModal"
-    ) as HTMLInputElement;
+    let eleImg = document.querySelector("#finalImageModal") as HTMLInputElement;
+    document.getElementById("downloadButton")!.innerHTML = "download";
     eleImg.classList.remove("showModal");
   }
 
@@ -297,9 +296,16 @@ function Home() {
         </div>
 
         <div id="finalImageModal">
-          <a href="javascript:void(0)" id="closeImageModal"  onClick={() => {
-                closeModal();
-              }}> &times; </a>
+          <a
+            href="javascript:void(0)"
+            id="closeImageModal"
+            onClick={() => {
+              closeModal();
+            }}
+          >
+            {" "}
+            &times;{" "}
+          </a>
           <img src="" id="finalImage" />
         </div>
       </main>
