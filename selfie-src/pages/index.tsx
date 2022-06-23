@@ -80,6 +80,13 @@ function Home() {
     });
   };
 
+  function closeModal() {
+    let eleImg = document.querySelector(
+      "#finalImageModal"
+    ) as HTMLInputElement;
+    eleImg.classList.remove("showModal");
+  }
+
   function showDiv() {
     let hiddenDiv = document.querySelector("#image") as HTMLInputElement;
     //let hideEle = document.querySelectorAll("#logo, #videoContainer, #consImage");
@@ -290,7 +297,10 @@ function Home() {
         </div>
 
         <div id="finalImageModal">
-          <img src="" alt="" id="finalImage" />
+          <a href="javascript:void(0)" id="closeImageModal"  onClick={() => {
+                closeModal();
+              }}> &times; </a>
+          <img src="" id="finalImage" />
         </div>
       </main>
     </div>
