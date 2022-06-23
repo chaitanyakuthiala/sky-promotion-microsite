@@ -297,14 +297,14 @@ function Home() {
 
         <div id="finalImageModal">
           <a
-            href="javascript:void(0)"
+            href="#!"
             id="closeImageModal"
             onClick={() => {
               closeModal();
             }}
           >
             {" "}
-            X {" "}
+            &times;{" "}
           </a>
           <div className="saveNoteText">
             <p>
