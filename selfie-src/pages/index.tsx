@@ -61,9 +61,16 @@ function Home() {
       document.getElementById("canvasImage") as HTMLInputElement
     ).then(function (canvas) {
       canvas.toBlob(function (blob) {
-        debugger;
-        saveAs(blob!, "jetpuffed.png");
-        document.getElementById("downloadButton")!.innerHTML = "download";
+        //debugger;
+        //saveAs(blob!, "jetpuffed.png");
+        //document.getElementById("downloadButton")!.innerHTML = "download";
+
+        const newImgWrap = document.querySelector('#finalImageModal') as HTMLInputElement;
+        const newImg = document.querySelector('#finalImage') as HTMLInputElement;
+        const url = URL.createObjectURL(blob!);
+        newImg.src = url;
+        newImgWrap.classList.add("showModal");
+
       });
     });
   };
@@ -275,6 +282,11 @@ function Home() {
             />
           )}
         </div>
+
+        <div id="finalImageModal">
+          <img src="" alt="" id="finalImage" />
+        </div>
+
       </main>
     </div>
   );
