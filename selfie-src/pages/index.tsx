@@ -304,8 +304,13 @@ function Home() {
             }}
           >
             {" "}
-            &times;{" "}
+            X {" "}
           </a>
+          <div className="saveNoteText">
+            <p>
+          To save your image, simply long press the image below and save the image. 
+          </p>
+          </div>
           <img src="" id="finalImage" />
         </div>
       </main>

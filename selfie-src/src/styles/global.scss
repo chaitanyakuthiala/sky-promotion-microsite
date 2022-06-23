@@ -104,23 +104,41 @@ body {
     bottom: 0;
     display: none;
     border: 15px solid #fff;
+    background: #fff;
     img{
-        max-width: 100%;
+        width: 90%;
+        margin: 0 auto;
     }
     &.showModal{
         display: flex;
+        flex-direction: column;
     }
     #closeImageModal {
         position: absolute;
         right: 15px;
         top: 15px;
-        color: #fff;
-        font-size: 40px;
+        color: #000;
+        font-size: 30px;
         line-height: 12px;
         height: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
     }
 }
 
+.saveNoteText {
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    padding-top: 40px;
+    p{
+        color: #000;
+        font-family: "Becky-Medium";
+        margin: 0;
+        font-size: 16px;
+        line-height: 26px;
+    }
+}
 
 @media screen and (min-width:768px) {
     #image {
@@ -152,6 +170,13 @@ body {
         .btn {
             padding: 8px;
             border: 3px solid #CCFFCC;
+        }
+    }
+    .saveNoteText {
+        padding-top: 40px;
+        p{
+            font-size: 13px;
+            line-height: 22px;
         }
     }
 }
