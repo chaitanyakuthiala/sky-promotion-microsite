@@ -23,6 +23,7 @@ function Home() {
   const [show, setShow] = React.useState(true);
   const [showCam, setShowCam] = React.useState(true);
   const [showLoader, setShowLoader] = React.useState(true);
+  const [showCameraButton, setShowCameraButton] = React.useState(false);
 
   useEffect(() => {
     bodyPix.load().then((net: bodyPix.BodyPix) => {
@@ -31,6 +32,7 @@ function Home() {
   }, []);
 
   const takeSelfie = () => {
+    setShowCameraButton(true);
     html2canvas(document.getElementById("main") as HTMLInputElement).then(
       function (canvas) {
         (
@@ -65,12 +67,15 @@ function Home() {
         //saveAs(blob!, "jetpuffed.png");
         //document.getElementById("downloadButton")!.innerHTML = "download";
 
-        const newImgWrap = document.querySelector('#finalImageModal') as HTMLInputElement;
-        const newImg = document.querySelector('#finalImage') as HTMLInputElement;
+        const newImgWrap = document.querySelector(
+          "#finalImageModal"
+        ) as HTMLInputElement;
+        const newImg = document.querySelector(
+          "#finalImage"
+        ) as HTMLInputElement;
         const url = URL.createObjectURL(blob!);
         newImg.src = url;
         newImgWrap.classList.add("showModal");
-
       });
     });
   };
@@ -198,6 +203,7 @@ function Home() {
               onClick={(e) => {
                 takeSelfie();
               }}
+              disabled={showCameraButton}
               data-html2canvas-ignore="true"
             >
               <img src={"./images/camera-button.svg"} />
@@ -286,7 +292,6 @@ function Home() {
         <div id="finalImageModal">
           <img src="" alt="" id="finalImage" />
         </div>
-
       </main>
     </div>
   );
