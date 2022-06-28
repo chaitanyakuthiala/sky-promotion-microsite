@@ -308,7 +308,7 @@ function Home() {
           </a>
           <div className="saveNoteText">
             <p>
-          To save your image, simply long press the image below and save the image. 
+            To download your selfie, simply long press the image below and save to your phone. 
           </p>
           </div>
           <img src="" id="finalImage" />
